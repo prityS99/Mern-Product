@@ -1,9 +1,12 @@
 // src/components/ProductCard.tsx
+
+'use client';
+
 import { Product } from "@/types/product"; 
 import { Heart, Plus } from "lucide-react";
 
 interface ProductCardProps {
-  product: Product; // Use the interface here
+  product: Product; 
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
@@ -22,7 +25,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         <h3 className="mt-1 text-sm font-semibold text-gray-800">{product.name}</h3>
         
         <div className="mt-2 flex items-center justify-between">
-          <p className="text-lg font-bold text-gray-900">${product.price}</p>
+          <p className="text-lg font-bold text-gray-900">{product.price}/-</p>
           <span className="text-xs text-gray-500">{product.color}</span>
         </div>
 
