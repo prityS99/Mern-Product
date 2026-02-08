@@ -1,5 +1,7 @@
+import Footer from "@/compo/Footer";
+import Navbar from "@/compo/Navbar";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,8 +22,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        {/* <Navbar/> */}
         {children}
+        {/* <Footer/> */}
       </body>
     </html>
   );
 }
+
+
+// NEXT_PUBLIC_API_URL=http://localhost:3009/api/v1
+
